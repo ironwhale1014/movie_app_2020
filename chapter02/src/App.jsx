@@ -24,20 +24,19 @@ function App() {
     }, []);
 
     return (<section className="container">
-        {isLoading ?
-            <div className="loader">
-                <span className="loader__text">Loading...</span>
-            </div>
-            : <div className="movies">
-                {movies.map((movie) => {
-                    return <Movie key={movie.id}
-                                  id={movie.id}
-                                  year={movie.year}
-                                  summary={movie.summary}
-                                  title={movie.title}
-                                  poster={movie.medium_cover_image}/>
-                })};
-            </div>}
+        {isLoading ? <div className="loader">
+            <span className="loader__text">Loading...</span>
+        </div> : <div className="movies">
+            {movies.map((movie) => {
+                return <Movie key={movie.id}
+                              id={movie.id}
+                              year={movie.year}
+                              summary={movie.summary}
+                              title={movie.title}
+                              poster={movie.medium_cover_image}
+                              genres={movie.genres}/>
+            })};
+        </div>}
     </section>)
 }
 
