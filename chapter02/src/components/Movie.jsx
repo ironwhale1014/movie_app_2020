@@ -1,7 +1,6 @@
 import "./Movie.css"
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
-import {useState} from "react";
 
 const Movie = ({title, year, summary, poster, genres}) => {
     return (
